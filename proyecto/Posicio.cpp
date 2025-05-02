@@ -1,6 +1,10 @@
-#include "Posicio.h"
-#include "fstream"
-Posicio::Posicio()
+#include "posicio.hpp"
+ostream& operator<<(ostream& out, const Posicio& pos) {
+	out << pos.toString();
+	return out;
+}
+
+/*Posicio::Posicio()
 {
 	m_fila = 0;
 	m_columna = 0;
@@ -22,3 +26,4 @@ Posicio::Posicio(const string& pos)
 	m_fila = (N_FILES - 1) - (pos[1] - '1');
 	m_columna = pos[0] - 'a';
 }
+*/
