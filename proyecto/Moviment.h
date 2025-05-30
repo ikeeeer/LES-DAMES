@@ -4,8 +4,8 @@ const int MAX_SALTS = 12; //cas màxim de captures possibles(capturar totes les p
 class Moviment
 {
 public:
-	Moviment() { m_nSalts = 0; m_nFitxes = 0; }
-	Moviment(const Posicio& posicio) { m_posicio_incial = posicio; m_nSalts = 0; m_nFitxes = 0; }
+	Moviment() { m_nSalts = 0; m_nFitxes = 0; heMatat = false; }
+	Moviment(const Posicio& posicio) { m_posicio_incial = posicio; m_nSalts = 0; m_nFitxes = 0; heMatat = false; }
 	void afageixPas(const Posicio& posicio);
 	//void afageixFitxaEliminiada(const Posicio& posicio_fitxa);
 	Posicio getInici() const { return m_posicio_incial; }
@@ -14,6 +14,12 @@ public:
 	bool esBuit() const;
 	Moviment duplicaMoviment() const;
 	//void afegeixMoviments(Tauler& tauler, Moviment moviments[], int& nMoviments) const;
+	int getNumSalts() const { return m_nSalts; }
+	Posicio getSalt(int posicio) const { return m_trajecte[posicio]; }
+	bool contePosicio(const int fila, const int col) const;
+	void setInici(const Posicio posInici) { m_posicio_incial = posInici; }
+	bool getHeMatat() const { return heMatat; }
+	void setHeMatat(bool matat) { heMatat = matat; }
 
 
 private:
@@ -22,4 +28,5 @@ private:
 	int m_nSalts;
 	//Posicio m_fitxes_eliminades[MAX_SALTS];
 	int m_nFitxes;
+	bool heMatat;
 };

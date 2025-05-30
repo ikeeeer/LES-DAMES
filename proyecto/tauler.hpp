@@ -16,14 +16,19 @@ public:
 	//void escriuTauler(const string& nomFitxer);
 	void actualitzaMovimentsValids();
 	Fitxa getFitxa(int fila, int columna) const { return m_tauler[fila][columna]; }
+	void getPosicionsPossiblesDirectes(const Posicio& origen, int& nPosicions,
+		Posicio posicionsPossibles[], TipusFitxa tipusOrigin, ColorFitxa colorOrigin, Moviment& movimentActual);
 	void getPosicionsPossibles(const Posicio& origen, int& nPosicions,
 		Posicio posicionsPossibles[]);
-	int obtenirDireccio(const Fitxa& fitxa, int fila, int columna) const;
+	int obtenirDireccio(const Fitxa& fitxa, int fila, int columna, ColorFitxa color) const;
 	void possiblesPosicionsNormal(const Fitxa& fitxa, int fila, int col, Posicio posicionsPossibles[], int& nPosicions, ColorFitxa color);
-	void possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, Posicio posicionsPossibles[], int& nPosicions, ColorFitxa color);
+	void possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, Posicio posicionsPossibles[], int& nPosicions, ColorFitxa color, Moviment& movimentActual);
 	bool mouFitxa(const Posicio& origen, const Posicio& desti);
 	string toString() const;
 	bool estaADinsDelTauler(int fila, int col);
+	void possiblesPosicionsMatar(const Fitxa& fitxa, int fila, int col, Posicio posicionsPossibles[], int& nPosicions, ColorFitxa color);
+	void possiblesPosicionsMatarDama(const Fitxa& fitxa, int fila, int col, Posicio posicionsPossibles[], int& nPosicions, Moviment& movimentActual, ColorFitxa colorOrigin, bool primerCop);
+
 
 private:
 	Fitxa m_tauler[N_FILES][N_COLUMNES];

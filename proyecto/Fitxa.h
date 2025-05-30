@@ -33,6 +33,10 @@ public:
 	ColorFitxa getColor() const { return m_color; }
 	Posicio getPosicio() const { return m_posicio; }
 	TipusFitxa getTipus() const { return m_tipus; }
+	void getPosicionsValides(Posicio posValides[], int& nPosValides);
+	void eliminaRepetides(Posicio posValides[], int& nPosValides);
+	bool teMoviments(const int fila, const int col) const;
+
 
 
 

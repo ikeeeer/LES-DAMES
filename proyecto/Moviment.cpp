@@ -39,7 +39,7 @@ void Moviment::afageixPas(const Posicio& posicio) {
 
     if (m_nSalts < MAX_SALTS)
     {
-        m_trajecte[m_nSalts + 1] = posicio; // +1 perquè la posició inicial és [0]
+        m_trajecte[m_nSalts] = posicio; 
         m_nSalts++;
     }
 }
@@ -50,11 +50,19 @@ bool Moviment::esBuit() const {
 Moviment Moviment::duplicaMoviment() const {
     Moviment copia;
     copia.m_posicio_incial = m_posicio_incial;
-    copia.m_nSalts = m_nSalts;
+    copia.m_nSalts = m_nSalts - 1;
     copia.m_nFitxes = m_nFitxes;
-
-    for (int i = 0; i < m_nSalts; ++i)
+    copia.heMatat = heMatat;
+    for (int i = 0; i < m_nSalts - 1; ++i)
         copia.m_trajecte[i] = m_trajecte[i];
-
     return copia;
+}
+bool Moviment::contePosicio(const int fila, const int col) const {
+    if (m_posicio_incial.getFila() == fila && m_posicio_incial.getColumna() == col)
+        return true;
+    for (int i = 0; i < m_nSalts; i++) {
+        if (m_trajecte[i].getFila() == fila && m_trajecte[i].getColumna() == col)
+            return true;
+    }
+    return false;
 }
