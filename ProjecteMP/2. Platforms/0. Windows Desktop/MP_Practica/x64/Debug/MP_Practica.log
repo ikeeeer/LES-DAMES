@@ -1,0 +1,109 @@
+﻿  debug.cpp
+  image_png.cpp
+  keyboard.cpp
+  mouse.cpp
+  NFont.cpp
+  SDL_FontCache.cpp
+  sound.cpp
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(138,23): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(205,25): warning C4309: '=': truncation of constant value
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(216,25): warning C4309: '=': truncation of constant value
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(570,17): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(571,21): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(607,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp(2654,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  sprites.cpp
+  stb_vorbis.cpp
+  video.cpp
+  Fitxa.cpp
+  GraphicManager.cpp
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\GraphicManager.cpp(29,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\GraphicManager.cpp(29,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  joc.cpp
+  main.cpp
+  Moviment.cpp
+  Posicio.cpp
+  Tauler.cpp
+  Generating Code...
+image_png.obj : error LNK2019: unresolved external symbol png_set_sig_bytes referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_sig_cmp referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_create_read_struct referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_create_info_struct referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_read_info referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_destroy_info_struct referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_destroy_read_struct referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_init_io referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_free referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_get_image_width referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+image_png.obj : error LNK2019: unresolved external symbol png_get_image_height referenced in function "void __cdecl read_png_file(char const *,int *,int *)" (?read_png_file@@YAXPEBDPEAH1@Z)
+keyboard.obj : error LNK2019: unresolved external symbol SDL_GetScancodeFromKey referenced in function "int __cdecl Keyboard_GetKeyCnt(int)" (?Keyboard_GetKeyCnt@@YAHH@Z)
+video.obj : error LNK2001: unresolved external symbol SDL_GetScancodeFromKey
+mouse.obj : error LNK2019: unresolved external symbol SDL_GetMouseState referenced in function "void __cdecl Mouse_Tick(void)" (?Mouse_Tick@@YAXXZ)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function FC_LoadFont
+video.obj : error LNK2001: unresolved external symbol SDL_GetError
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RWFromFile referenced in function FC_LoadFont
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_CreateRGBSurface referenced in function "struct SDL_Surface * __cdecl FC_CreateSurface32(unsigned int,unsigned int)" (?FC_CreateSurface32@@YAPEAUSDL_Surface@@II@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_FreeSurface referenced in function FC_GetGlyphData
+sprites.obj : error LNK2001: unresolved external symbol SDL_FreeSurface
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetSurfaceBlendMode referenced in function "unsigned char __cdecl FC_AddGlyphToCache(struct FC_Font *,struct SDL_Surface *)" (?FC_AddGlyphToCache@@YAEPEAUFC_Font@@PEAUSDL_Surface@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_UpperBlit referenced in function FC_LoadFontFromTTF
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetHint referenced in function FC_UploadGlyphCache
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_GetHint referenced in function FC_UploadGlyphCache
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_Log referenced in function "unsigned char __cdecl FC_GrowGlyphCache(struct FC_Font *)" (?FC_GrowGlyphCache@@YAEPEAUFC_Font@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_GetRendererInfo referenced in function FC_LoadFontFromTTF
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_CreateTexture referenced in function "unsigned char __cdecl FC_GrowGlyphCache(struct FC_Font *)" (?FC_GrowGlyphCache@@YAEPEAUFC_Font@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_CreateTextureFromSurface referenced in function "unsigned char __cdecl FC_AddGlyphToCache(struct FC_Font *,struct SDL_Surface *)" (?FC_AddGlyphToCache@@YAEPEAUFC_Font@@PEAUSDL_Surface@@@Z)
+sprites.obj : error LNK2001: unresolved external symbol SDL_CreateTextureFromSurface
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_QueryTexture referenced in function FC_GetGlyphData
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetTextureColorMod referenced in function "void __cdecl set_color(struct SDL_Texture *,unsigned char,unsigned char,unsigned char,unsigned char)" (?set_color@@YAXPEAUSDL_Texture@@EEEE@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetTextureAlphaMod referenced in function "void __cdecl set_color(struct SDL_Texture *,unsigned char,unsigned char,unsigned char,unsigned char)" (?set_color@@YAXPEAUSDL_Texture@@EEEE@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetTextureBlendMode referenced in function FC_LoadFontFromTTF
+sprites.obj : error LNK2001: unresolved external symbol SDL_SetTextureBlendMode
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetRenderTarget referenced in function "unsigned char __cdecl FC_AddGlyphToCache(struct FC_Font *,struct SDL_Surface *)" (?FC_AddGlyphToCache@@YAEPEAUFC_Font@@PEAUSDL_Surface@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RenderSetClipRect referenced in function "void __cdecl set_clip(struct SDL_Renderer *,struct SDL_Rect *)" (?set_clip@@YAXPEAUSDL_Renderer@@PEAUSDL_Rect@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RenderGetClipRect referenced in function "struct SDL_Rect __cdecl get_clip(struct SDL_Renderer *)" (?get_clip@@YA?AUSDL_Rect@@PEAUSDL_Renderer@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RenderIsClipEnabled referenced in function "unsigned char __cdecl has_clip(struct SDL_Renderer *)" (?has_clip@@YAEPEAUSDL_Renderer@@@Z)
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_SetRenderDrawColor referenced in function FC_UploadGlyphCache
+video.obj : error LNK2001: unresolved external symbol SDL_SetRenderDrawColor
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_GetRenderDrawColor referenced in function FC_UploadGlyphCache
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RenderClear referenced in function FC_UploadGlyphCache
+video.obj : error LNK2001: unresolved external symbol SDL_RenderClear
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RenderCopy referenced in function "unsigned char __cdecl FC_AddGlyphToCache(struct FC_Font *,struct SDL_Surface *)" (?FC_AddGlyphToCache@@YAEPEAUFC_Font@@PEAUSDL_Surface@@@Z)
+sprites.obj : error LNK2001: unresolved external symbol SDL_RenderCopy
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_RenderCopyEx referenced in function FC_DefaultRenderCallback
+SDL_FontCache.obj : error LNK2019: unresolved external symbol SDL_DestroyTexture referenced in function "unsigned char __cdecl FC_AddGlyphToCache(struct FC_Font *,struct SDL_Surface *)" (?FC_AddGlyphToCache@@YAEPEAUFC_Font@@PEAUSDL_Surface@@@Z)
+sprites.obj : error LNK2001: unresolved external symbol SDL_DestroyTexture
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_Init referenced in function FC_LoadFont_RW
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_OpenFontRW referenced in function FC_LoadFont_RW
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_SetFontStyle referenced in function FC_LoadFont_RW
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_SetFontOutline referenced in function FC_LoadFont_RW
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_FontHeight referenced in function FC_LoadFontFromTTF
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_FontAscent referenced in function FC_LoadFontFromTTF
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_FontDescent referenced in function FC_LoadFontFromTTF
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_RenderUTF8_Blended referenced in function FC_GetGlyphData
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_CloseFont referenced in function FC_ClearFont
+SDL_FontCache.obj : error LNK2019: unresolved external symbol TTF_WasInit referenced in function FC_LoadFont_RW
+sound.obj : error LNK2019: unresolved external symbol SDL_OpenAudio referenced in function "void __cdecl Sound_Init(void)" (?Sound_Init@@YAXXZ)
+sound.obj : error LNK2019: unresolved external symbol SDL_PauseAudio referenced in function "void __cdecl Sound_Init(void)" (?Sound_Init@@YAXXZ)
+sound.obj : error LNK2019: unresolved external symbol SDL_LockAudio referenced in function "void __cdecl Sound_Lock(void)" (?Sound_Lock@@YAXXZ)
+sound.obj : error LNK2019: unresolved external symbol SDL_UnlockAudio referenced in function "void __cdecl Sound_Unlock(void)" (?Sound_Unlock@@YAXXZ)
+sprites.obj : error LNK2019: unresolved external symbol IMG_Quit referenced in function "public: __cdecl Sprite::~Sprite(void)" (??1Sprite@@QEAA@XZ)
+sprites.obj : error LNK2019: unresolved external symbol IMG_Load referenced in function "private: struct Frame * __cdecl Sprite::CreateFrame(char const *)" (?CreateFrame@Sprite@@AEAAPEAUFrame@@PEBD@Z)
+video.obj : error LNK2019: unresolved external symbol SDL_SetMainReady referenced in function "public: __cdecl Screen::Screen(unsigned int,unsigned int)" (??0Screen@@QEAA@II@Z)
+main.obj : error LNK2001: unresolved external symbol SDL_SetMainReady
+video.obj : error LNK2019: unresolved external symbol SDL_CreateWindow referenced in function "private: void __cdecl Screen::init(int,int,bool)" (?init@Screen@@AEAAXHH_N@Z)
+video.obj : error LNK2019: unresolved external symbol SDL_ShowWindow referenced in function "public: void __cdecl Screen::show(void)" (?show@Screen@@QEAAXXZ)
+video.obj : error LNK2019: unresolved external symbol SDL_DestroyWindow referenced in function "public: __cdecl Screen::~Screen(void)" (??1Screen@@QEAA@XZ)
+video.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function "private: void __cdecl Screen::processEventSystem(void)" (?processEventSystem@Screen@@AEAAXXZ)
+video.obj : error LNK2019: unresolved external symbol SDL_CreateRenderer referenced in function "private: void __cdecl Screen::init(int,int,bool)" (?init@Screen@@AEAAXHH_N@Z)
+video.obj : error LNK2019: unresolved external symbol SDL_RenderPresent referenced in function "private: void __cdecl Screen::flip(void)" (?flip@Screen@@AEAAXXZ)
+video.obj : error LNK2019: unresolved external symbol SDL_DestroyRenderer referenced in function "public: __cdecl Screen::~Screen(void)" (??1Screen@@QEAA@XZ)
+video.obj : error LNK2019: unresolved external symbol SDL_Init referenced in function "public: __cdecl Screen::Screen(unsigned int,unsigned int)" (??0Screen@@QEAA@II@Z)
+main.obj : error LNK2001: unresolved external symbol SDL_Init
+video.obj : error LNK2019: unresolved external symbol SDL_Quit referenced in function "public: __cdecl Screen::~Screen(void)" (??1Screen@@QEAA@XZ)
+main.obj : error LNK2001: unresolved external symbol SDL_Quit
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\2. Platforms\0. Windows Desktop\\extlibs\SDL2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\2. Platforms\0. Windows Desktop\\extlibs\SDL2_image.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\2. Platforms\0. Windows Desktop\\extlibs\SDL2_ttf.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\2. Platforms\0. Windows Desktop\\extlibs\libpng16.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\2. Platforms\0. Windows Desktop\\Program\MP_Practica.exe : fatal error LNK1120: 65 unresolved externals
