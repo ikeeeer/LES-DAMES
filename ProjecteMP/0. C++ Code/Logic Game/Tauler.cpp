@@ -117,7 +117,7 @@ void Tauler::actualitzaMovimentsValids() {
 						}
 						//posicioActual amb la primer posicio valida
 						posActual = posValides[posValides.size() - 1];
-						iniciPosValida--;
+						//iniciPosValida--;
 
 						// Afegim el moviment actual ja modificat a la cua de pendents per seguir expandint-lo
 						getPosicionsPossiblesDirectes(posActual, nPosValides, posValides, tipusOrigin, colorOrigin, movimentActual); //agafem totes les possibles posicions desde la posicioActual i actualitzem nPosValides
@@ -311,7 +311,7 @@ bool Tauler::mouFitxa(const Posicio& origen, const Posicio& desti) {
 	if (valid) { // Movemos la pieza a la nueva posición
 		// Comprobamos si el movimiento ha sido el mejor (máxima captura)
 		
-		if (bufar && posicioABuffar.getFila()!= origen.getFila() && posicioABuffar.getColumna() != origen.getColumna()) {
+		if (bufar && (posicioABuffar.getFila()!= origen.getFila() || posicioABuffar.getColumna() != origen.getColumna())) {
 			// Cas que sigui la feitxa a bufer diferent de l'origen
 			*m_tauler[posicioABuffar.getFila()][posicioABuffar.getColumna()] = Fitxa(posicioABuffar, TIPUS_EMPTY);
 			*m_tauler[desti.getFila()][desti.getColumna()] = fitxa;
@@ -561,16 +561,22 @@ void Tauler::marcarMatarSegonsColor(ColorFitxa color, Posicio posicio) {
 }
 bool Tauler::podenMatar(ColorFitxa color) {
 	if (color == COLOR_BLANC) {
-		Posicio p(fitxaBlancaQuePotMatar.getPosicio().getFila(), 
-						fitxaBlancaQuePotMatar.getPosicio().getColumna());
-		posicioABuffar =  p;
-		posicioABuffar.setMataFitxa(true); // Marquem que pot matar
-		return podenMatarBlanques;
+		if (podenMatarBlanques) {
+
+			Posicio p(fitxaBlancaQuePotMatar.getPosicio().getFila(),
+				fitxaBlancaQuePotMatar.getPosicio().getColumna());
+			posicioABuffar = p;
+			posicioABuffar.setMataFitxa(true); // Marquem que pot matar
+			return podenMatarBlanques;
+		}
 	} else if (color == COLOR_NEGRE) {
-		Posicio p(fitxaNegraQuePotMatar.getPosicio().getFila(), 
-						fitxaNegraQuePotMatar.getPosicio().getColumna());
-		posicioABuffar = p;
-		posicioABuffar.setMataFitxa(true); // Marquem que pot matar
+		if (podenMatarNegres) {
+			Posicio p(fitxaNegraQuePotMatar.getPosicio().getFila(),
+				fitxaNegraQuePotMatar.getPosicio().getColumna());
+			posicioABuffar = p;
+			posicioABuffar.setMataFitxa(true); // Marquem que pot matar
+			return podenMatarNegres;
+		}
 	}
 	return false;
 }

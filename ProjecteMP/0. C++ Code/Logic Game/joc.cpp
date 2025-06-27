@@ -51,8 +51,8 @@ bool Joc::actualitza(int mousePosX, int mousePosY, bool mouseStatus)
 	int auxX = (mousePosY - POS_Y_TAULER - CASELLA_INICIAL_Y) / ALCADA_CASELLA;
 	visualitzaTorn();
 	//mostraPosMouse(auxX, auxY);
-	Posicio posMouse = m_tauler.getPosicioTauler(auxX, auxY);
 	if (m_tauler.estaADinsDelTauler(auxX,auxY)) {
+		Posicio posMouse = m_tauler.getPosicioTauler(auxX, auxY);
 		//Mirem si esta dins del tauler i quin mode es
 		if (m_mode == MODE_JOC_NORMAL) {
 			Fitxa fitxa = m_tauler.getFitxa(auxX, auxY);

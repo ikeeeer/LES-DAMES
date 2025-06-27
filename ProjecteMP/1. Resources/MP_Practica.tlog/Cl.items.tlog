@@ -1,18 +1,18 @@
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\debug.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\debug.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\image_png.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\image_png.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\keyboard.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\keyboard.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\mouse.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\mouse.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\NFont.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\NFont.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\SDL_FontCache.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\sound.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\sound.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\sprites.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\sprites.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\stb_vorbis.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\stb_vorbis.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Graphic Lib\video.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\video.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\CuaMoviments.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\CuaMoviments.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\Fitxa.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\Fitxa.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\GraphicManager.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\GraphicManager.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\joc.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\joc.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\main.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\main.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\Moviment.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\Moviment.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\Posicio.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\Posicio.obj
-C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\0. C++ Code\Logic Game\Tauler.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\projecte MP\1. Resources\Tauler.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\debug.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\debug.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\image_png.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\image_png.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\keyboard.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\keyboard.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\mouse.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\mouse.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\NFont\NFont.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\NFont.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\NFont\SDL_FontCache.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\SDL_FontCache.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\sound.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\sound.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\sprites.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\sprites.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\stb_vorbis.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\stb_vorbis.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Graphic Lib\video.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\video.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\CuaMoviments.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\CuaMoviments.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\Fitxa.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\Fitxa.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\GraphicManager.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\GraphicManager.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\joc.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\joc.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\main.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\main.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\Moviment.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\Moviment.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\Posicio.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\Posicio.obj
+C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\0. C++ Code\Logic Game\Tauler.cpp;C:\Users\ikeru\OneDrive\Escriptori\MP\proyecto\LES-DAMES\ProjecteMP\1. Resources\Tauler.obj
