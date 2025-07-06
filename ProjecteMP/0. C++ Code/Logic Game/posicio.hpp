@@ -40,12 +40,8 @@ public:
 		}
 		return *this;
 	}
-	bool operator!=(const Posicio& pos) {
-		if (this != &pos) {
-			m_fila != pos.m_fila;
-			m_columna != pos.m_columna;
-		}
-		return this;
+	bool operator!=(const Posicio& pos) const {
+		return !(pos.m_fila == m_fila && pos.m_columna == m_columna);
 	}
 
 

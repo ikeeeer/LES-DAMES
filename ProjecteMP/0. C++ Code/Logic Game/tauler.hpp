@@ -28,7 +28,7 @@ public:
 	string toString() const;
 	bool estaADinsDelTauler(int fila, int col) const;
 	void possiblesPosicionsMatar(const Fitxa& fitxa, int fila, int col, vector<Posicio>& posicionsPossibles, int& nPosicions, ColorFitxa color);
-	void possiblesPosicionsMatarDama(const Fitxa& fitxa, int fila, int col, vector<Posicio>& posicionsPossibles, int& nPosicions, Moviment &movimentActual, ColorFitxa colorOrigin, bool primerCop);
+	void possiblesPosicionsMatarDama(const Fitxa& fitxa, int fila, int col, vector<Posicio>& posicionsPossibles, int& nPosicions, Moviment& movimentActual, ColorFitxa colorOrigin, bool primerCop);
 
 	void visualitza(bool fitxaSeleccionada, vector<Posicio> posicionsValides, int posXTauler, int posYTauler, int casellaInicialX, int casellaInicialY, int ampladaCasella, int alcadaCasella);
 		Posicio getPosicioTauler(int x, int y) { return m_tauler[x][y]->getPosicio(); }

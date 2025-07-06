@@ -127,6 +127,9 @@ bool Joc::actualitza(int mousePosX, int mousePosY, bool mouseStatus)
 				//m_tauler.visualitza(false, m_posicionsValides);
 				if (m_tauler.esBuit(canviaTorn(m_torn))) {
 					m_partidaAcabada = true;
+					GraphicManager::getInstance()->drawSprite(GRAFIC_FONS, 0, 0);
+					GraphicManager::getInstance()->drawSprite(GRAFIC_TAULER, POS_X_TAULER, POS_Y_TAULER);
+					m_tauler.visualitza(m_fitxaSeleccionada, m_posicionsValides, POS_X_TAULER, POS_Y_TAULER, CASELLA_INICIAL_X, CASELLA_INICIAL_Y, AMPLADA_CASELLA, ALCADA_CASELLA);
 					finalitza();
 					return true;
 				}

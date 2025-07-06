@@ -116,10 +116,11 @@ void Tauler::actualitzaMovimentsValids() {
 							nMovimentsPendents++;
 						}
 						//posicioActual amb la primer posicio valida
-						posActual = posValides[posValides.size() - 1];
-						//iniciPosValida--;
+						posActual = posValides[iniciPosValida - 1];
+						iniciPosValida--;
 
 						// Afegim el moviment actual ja modificat a la cua de pendents per seguir expandint-lo
+						posValides.clear();
 						getPosicionsPossiblesDirectes(posActual, nPosValides, posValides, tipusOrigin, colorOrigin, movimentActual); //agafem totes les possibles posicions desde la posicioActual i actualitzem nPosValides
 					}
 					// Si el moviment no està buit (ha fet algun pas), l'afegim com a vàlid
@@ -193,20 +194,21 @@ void Tauler::possiblesPosicionsMatar(const Fitxa& fitxa, int fila, int col, vect
 		if (estaADinsDelTauler(f, c) && estaADinsDelTauler(f2, c2)) {
 			Fitxa rival = getFitxa(f, c); //creem una possible fitxa rival a la posicio on es mou la peça de normal
 			Fitxa desti = getFitxa(f2, c2); //creem la possible fitxa on acabarà
-			if (!rival.esBuida() && rival.getColor() != fitxa.getColor() && desti.esBuida()) { //si el rival exsiteix de veritat i el desti és buit, agragem
+			if (!rival.esBuida() && rival.getColor() != color && desti.esBuida()) { //si el rival exsiteix de veritat i el desti és buit, agragem
 				Posicio posicioMatar(f2, c2);
 				posicioMatar.setMataFitxa(true); //marquem que mata una fitxa
 				posicionsPossibles.push_back(posicioMatar); //afegim la posicio de matar
 				nPosicions++;
 				marcarMatarSegonsColor(fitxa.getColor(), Posicio(fila, col)); //marquem que pot matar segons el color
 			}
+
 		}
 	}
 }
 bool Tauler::estaADinsDelTauler(int fila, int col) const {
 	return (fila >= 0 && fila < N_FILES && col >= 0 && col < N_COLUMNES);
 }
-void Tauler::possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, vector<Posicio>& posicionsPossibles, int& nPosicions, ColorFitxa color,  Moviment &movimentActual) {
+void Tauler::possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, vector<Posicio>& posicionsPossibles, int& nPosicions, ColorFitxa color,  Moviment& movimentActual) {
 	int dirDama[4][2] = { {1, 1}, {1, -1}, {-1, 1}, {-1, -1} };
 	if (movimentActual.getNumSalts() == 0 || movimentActual.getHeMatat()) {
 
@@ -215,15 +217,17 @@ void Tauler::possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, vecto
 			int f = fila + dirDama[i][0];
 			int c = col + dirDama[i][1];
 			//mirar posicions possibles consecutives
-			if(estaADinsDelTauler(f, c) &&  !movimentActual.contePosicio(f, c) ) {
+			if(estaADinsDelTauler(f, c) && !movimentActual.contePosicio(f, c)) {
 				if (getFitxa(f, c).esBuida() && !movimentActual.getHeMatat()) {
 					// Cas que no he matat cap fitxa
 					// i la posició està buida, afegim la posició
 					posicionsPossibles.push_back(Posicio(f, c));
 					nPosicions++;
-				} else {
+				}
+				else {
 					// Si hi ha una fitxa rival, mirar si es pot matar
 					// i afegir la posició de salt
+					
 					if (getFitxa(f, c).getColor() != color && !getFitxa(f, c).esBuida()) {
 						int fAux = f + dirDama[i][0];
 						int cAux = c + dirDama[i][1];
@@ -235,14 +239,35 @@ void Tauler::possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, vecto
 							marcarMatarSegonsColor(color, fitxa.getPosicio());
 						}
 					}
-				}	
+					else {
+						//Cas que mata una fitxa i pot matar a una altre en la diagonal
+						bool trobat = false;
+						while (!trobat && estaADinsDelTauler(f, c)) { //buscar si hi ha alguna fitxa per matar en la diagonal f-fila c-col
+							int fAux = f + dirDama[i][0];
+							int cAux = c + dirDama[i][1];
+							if (getFitxa(f, c).getColor() != color && !getFitxa(f, c).esBuida()) {
+								if (estaADinsDelTauler(fAux, cAux) && getFitxa(fAux, cAux).esBuida() && !movimentActual.contePosicio(fAux, cAux)) {
+									Posicio posicioMatar(fAux, cAux);
+									posicioMatar.setMataFitxa(true); //marquem que mata una fitxa
+									posicionsPossibles.push_back(posicioMatar);
+									nPosicions++;
+									marcarMatarSegonsColor(color, fitxa.getPosicio());
+									trobat = true;
+								}
+							}
+							f = fAux;
+							c = cAux;
+						}
+					}
+				}
 			}
 		}
 
-	} else {
+	}
+	else {
 		// Si ja s'ha fet un salt, seguir en la mateixa direcció que el primer salt
-		dirDama[0][0] = (movimentActual.getSalt(0).getFila() - movimentActual.getInici().getFila())/ abs(movimentActual.getSalt(0).getFila() - movimentActual.getInici().getFila());
-		dirDama[0][1] = (movimentActual.getSalt(0).getColumna() - movimentActual.getInici().getColumna()) / abs(movimentActual.getSalt(0).getColumna() - movimentActual.getInici().getColumna());
+		dirDama[0][0] = (fila - movimentActual.getInici().getFila()) / abs(fila - movimentActual.getInici().getFila());
+		dirDama[0][1] = (col - movimentActual.getInici().getColumna()) / abs(col - movimentActual.getInici().getColumna());
 
 		int f = fila + dirDama[0][0];
 		int c = col + dirDama[0][1];
@@ -266,8 +291,6 @@ void Tauler::possiblesPosicionsDama(const Fitxa& fitxa, int fila, int col, vecto
 			}
 		}
 	}
-
-		
 }
 void Tauler::possiblesPosicionsMatarDama(const Fitxa& fitxa, int fila, int col, vector<Posicio>& posicionsPossibles, int& nPosicions, Moviment &movimentActual, ColorFitxa colorOrigin, bool primerCop) {
 	int dirDama[4][2] = { {1, 1}, {1, -1}, {-1, 1}, {-1, -1} };
@@ -610,13 +633,17 @@ bool Tauler::esBuit(ColorFitxa torn) {
 	return true;
 }
 bool Tauler::maximMovimentsMatats(const Fitxa& fitxa, Moviment mov) {
+	int maxSaltsFitxa = mov.getNumSalts();
 	for (int i = 0; i < N_FILES; i++) {
 		for (int j = 0; j < N_COLUMNES; j++) {
-			Fitxa aux = *m_tauler[i][j];
-			if (fitxa.getColor() == aux.getColor() && fitxa.getPosicio() != aux.getPosicio()){
-				for (int k = 0; k < aux.getNMovimentsValids(); k++) {
-					if(aux.getMoviment(k).getHeMatat() && aux.getMoviment(k).getNumSalts() > mov.getNumSalts())
-						return true;
+			if (m_tauler[i][j] != nullptr) {
+				Fitxa aux = *m_tauler[i][j];
+				if (fitxa.getColor() == aux.getColor() && fitxa.getPosicio() != aux.getPosicio()) {
+					for (int k = 0; k < aux.getNMovimentsValids(); k++) {
+						Moviment mov2 = aux.getMoviment(k);
+						if (mov2.getHeMatat() && mov2.getNumSalts() > maxSaltsFitxa && mov2.getPrimer() == mov.getPrimer())
+							return true;
+					}
 				}
 			}
 		}

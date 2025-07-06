@@ -67,10 +67,10 @@ int main(int argc, const char* argv[])
     int posTextX = POS_X_TAULER;
     int posTextY = POS_Y_TAULER + (ALCADA_CASELLA * NUM_FILES_TAULER) + 220;
     string msg = "";
-    if (joc.getTorn() == COLOR_BLANC)
-        msg = "Ha gunayat BLANC!";
+    if (joc.getTorn() != COLOR_BLANC)
+        msg = "Ha guanyat BLANC!";
     else
-        msg = "Ha gunayat NEGRE!";
+        msg = "Ha guanyat NEGRE!";
     GraphicManager::getInstance()->drawFont(FONT_WHITE_30, posTextX, posTextY, 0.8, msg);
     pantalla.update();
     this_thread::sleep_for(chrono::seconds(3));

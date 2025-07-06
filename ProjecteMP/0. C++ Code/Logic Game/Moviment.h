@@ -26,7 +26,7 @@ public:
 	void setInici(const Posicio posInici) { m_posicio_incial = posInici; }
 	bool getHeMatat() const { return heMatat; }
 	void setHeMatat(bool matat) { heMatat = matat; }
-
+	Posicio getPrimer() { return m_trajecte[0]; }
 
 private:
 	Posicio m_posicio_incial;
